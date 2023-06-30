@@ -1,0 +1,89 @@
+.FullListFilmes{
+    display: flex;
+}
+
+/* HEADER DA PÁGINA DE LISTAGEM DE FILMES */
+.headerListFull{
+    width: 100%;
+    background: linear-gradient(#000000e7, #0f1a2000);
+    padding: 7rem 0 5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.textHeaderListFull{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 4rem;
+}
+.textHeaderListFull h1{
+    font-family: var(--Anton);
+    font-size: 50px;
+}
+.textHeaderListFull p{
+    font-size: 17px;
+    font-family: var(--Tsukimi);
+}
+/* FIM DO HEADER DA PÁGINA DE LISTAGEM DE FILMES */
+
+/* PARTE PRINCIPAL DA PÁGINA DE LISTAGEM DE FILMES */
+
+.selectListFull{
+    transform: translateY(-20px);
+    padding: 0 0 2rem 0;
+}
+
+.personalListFull{
+    padding: 0 0 3rem 0;
+    gap: 2rem;
+}
+
+.defaultImgErrorFullList{
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.defaultImgErrorFullList p{
+    font-family: var(--Tsukimi);
+    font-size: 18px;
+}
+.defaultImgErrorFullList img{
+    width: 13rem;
+    height: 12rem;
+    margin: auto;
+    opacity: 0.7;
+}
+.titleFooterFullFilmes{
+    background: linear-gradient(#0f1a2000, #000000fe);
+}
+
+.ulListFullContent{
+    transition: all .4s ease-in-out;
+    z-index: 1;
+}
+.ulListFullContent:hover{
+    scale: 1.1;
+    transition: all .4s ease-in-out;
+    z-index: 2;
+}
+
+@media(max-width: 1000px){
+    .textHeaderListFull h1{
+        font-size: 40px;
+    }
+    .textHeaderListFull p{
+        font-size: 15px;
+    }
+    .ulListFullContent{
+        width: 13rem;
+    }
+    .ulListFullContent img{
+        height: 7rem;
+    }
+}
+
+/* FIM DA PARTE PRINCIPAL DA PÁGINA DE LISTAGEM DE FILMES */

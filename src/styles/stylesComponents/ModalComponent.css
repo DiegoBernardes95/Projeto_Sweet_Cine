@@ -1,0 +1,56 @@
+/* MODAL DE CARREGANMENTO DA PÁGINA */
+.modalComponent{
+    position: absolute;
+    width: 100%;
+    display: none;
+    color: #fff;
+    z-index: 20;
+}
+.modalContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000df;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+/* Gif para carregamento de informações */
+.gifLoading{
+    height: 260px;
+    width: 260px;
+}
+/* Mensagem animada para carregamento de informações */
+.animatedLoading {
+    font-family: var(--Monoton);
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    animation: jumpingText 2s infinite ease-in-out;
+    transition: all .7s ease-in-out;
+}
+
+@keyframes jumpingText {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@media(max-width: 1100px){
+    .gifLoading{
+        height: 200px;
+        width: 200px;
+    }
+    .animatedLoading{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,146 @@
+.Dashboard{
+    display: flex;
+    flex-direction: row;
+}
+
+/* MAIN DA PÁGINA DE INFORMAÇÕES */
+
+:is(.sectionContent, .contentDashboard){
+    display: flex;
+}
+
+.mainDashboard{
+    background: linear-gradient(#000000ee, #0f1a2026, #000000f0);
+}
+.sectionContent{
+    flex-direction: column;
+}
+.contentDashboard{
+    width: 100%;
+    height: 41.5rem;
+    text-align: center;
+    flex-direction: column;
+}
+.contentDashboard a{
+    text-decoration: none;
+    color: unset;
+}
+
+
+.contentDashboard h1{
+    font-family: var(--Monoton);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+.placar{
+    line-height: 2.5rem;
+    margin: auto;
+    padding: 0 1.2rem 0 1.2rem;
+}
+.placar p{
+    font-size: 18px;
+    font-family: var(--Tsukimi);
+}
+.placar span{
+    font-size: 50px;
+    color: #ffd700;
+    font-family: var(--Anton);
+}
+
+.topPlacar{
+    background: url(/public/placarInfos.jpg) #000000c3;
+}
+.topCinema{
+    background: url(/public/popcorn.jpg) #000000c3;
+}
+.topGenero{
+    background: url(/public/genrerInfos.jpg) #000000c3;
+
+}
+.topIngressos{
+    background: url(/public/ticket.jpg) #000000c3;
+}
+.topFilmes{
+    background: url(/public/cineInfos.jpg) #000000c3;
+    padding: 6rem 0 1.4rem 0;
+    height: auto;
+}
+
+.topCinema, .topGenero, .topIngressos, .topPlacar, .topFilmes{
+    background-blend-mode: darken;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.topFilmes h1{
+    margin-bottom: 1.5rem;
+}
+
+.listRanking{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 2rem 0 0 0;
+    gap: 1.5rem !important;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+  .listRanking span{
+    font-size: 13px;
+    color: #fff;
+    font-family: var(--cutiveMono);
+    font-style: italic;
+    font-weight: bold;
+  }
+  .listRanking li{
+    flex-direction: column;
+    transition: all .4s ease-in-out;
+  }
+  .listRanking img{
+    width: 180px;
+    height: 250px;
+  }
+  
+  .starFull{
+    width: 18px !important;
+    height: 20px !important;
+    margin-right: .2rem;
+  }
+  .listRanking li p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-wrap: break-word;
+    width: 180px;
+    height: 63px;
+    line-height: 1.3rem;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .listRanking li:hover{
+    scale: 1.1;
+    transition: all .4s ease-in-out;
+  }
+
+
+/* FIM DO MAIN DA PÁGINA DE INFORMAÇÕES */
+
+/* RESPONSIVO DA PÁGINA DE DASHBOARD */
+
+@media(max-width: 1000px){
+    .placar p{
+        font-size: 16px;
+    }
+    .placar span{
+        font-size: 30px;
+    }
+    .topFilmes{
+        height: auto;
+    }
+    .listRanking span{
+        font-size: 13px;
+    }
+}
+
+/* FIM DO RESPONSIVO DA PÁGINA DE DASHBOARD */

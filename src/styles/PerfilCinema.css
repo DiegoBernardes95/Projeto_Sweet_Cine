@@ -1,0 +1,156 @@
+.PerfilCinema{
+    display: flex;
+}
+.btnBack img{
+    width: 25px;
+}
+/* TÍTULO DA PAGINA DE CINEMA POR ID */
+.starsCine{
+    margin-bottom: 1rem;
+}
+.starsCine img{
+    width: 26px;
+    height: 26px;
+    margin-left: .7rem;
+}
+.cineTitle{
+    height: 41.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cineTitle sub{
+    font-style: italic;
+    color: #d9d9d9;
+}
+
+.cineTitle h1{
+    font-family: var(--Anton);
+    font-size: 70px;
+    color: #d9d9d9;
+    margin-bottom: 2rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.cineTitle p{
+    line-height: 1rem;
+    font-family: var(--cutiveMono);
+    font-size: 19px;
+    font-weight: bolder;
+    color: #d9d9d9;
+}
+.cineTitle cite{
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 2rem;
+    padding: 0 2rem 0 2rem;
+    font-family: var(--Tsukimi);
+    font-size: 16px;
+}
+
+.editAndDelete{
+    margin-top: 1.7rem;
+}
+.editAndDelete button{
+    background: none;
+    border: none;
+}
+.editAndDelete img{
+    width: 25px;
+    margin-right: 1.2rem;
+    transition: all .4s ease-in-out;
+}
+.editAndDelete img:hover{
+    scale: 1.1;
+    transition: all .4s ease-in-out;
+}
+
+/* FIM DO TÍTULO DA PÁGINA DE CINEMA POR ID */
+
+/* LISTA DE FILMES POR CINEMA */
+
+.articleDescription{
+    padding: 8rem 0 8rem 0;
+    background: linear-gradient(#000, #0000, #000);
+    text-align: center;
+}
+
+.articleDescription span{
+    font-family: var(--Anton);
+    color: #ff3f3f;
+    font-size: 28px;
+}
+.articleDescription span:nth-child(1){
+    color: #ffd700;
+}
+.articleDescription p{
+    font-family: var(--Tsukimi);
+    font-size: 20px;
+    padding: 0 1rem 0 1rem;
+}
+.sectionListFilmesForCine{
+    background: linear-gradient(#000, #0000, #000);
+}
+
+.listFull{
+    padding: 5rem 1.5rem 5rem 1.5rem;
+    gap: 2rem;
+}
+.listCinesContent{
+    background: #d9d9d91b;
+    width: 20rem;
+}
+.listCinesContent img{
+    height: 9.5rem;
+}
+
+.listCinesTextContent{
+    padding: 1.3rem;
+}
+
+.defaultErrorImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 18px;
+    font-family: var(--Tsukimi);
+}
+.defaultErrorImg img{
+    width: 180px;
+}
+/* FIM DA LISTA DE FILMES POR CINEMA */
+
+/* RESPONSIVO */
+
+@media(max-width: 1000px){
+    .cineTitle h1{
+        font-size: 40px;
+    }
+    .cineTitle p{
+        font-size: 16px;
+    }
+    .listCinesContent{
+        width: 12rem;
+    }
+    .listCinesContent img{
+        height: 6.5rem;
+    }
+    .listCinesTextContent{
+        padding: .8rem;
+    }
+    .articleDescription span{
+        font-size: 24px;
+    }
+    .articleDescription p{
+        font-size: 17px;
+    }
+}
+
+/* FIM DO RESPONSIVO */

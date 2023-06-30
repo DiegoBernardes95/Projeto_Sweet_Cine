@@ -1,0 +1,75 @@
+.globalRegister {
+    width: 100%;
+    color: #fff;
+}
+
+.mainRegister {
+    background: linear-gradient(#000000ee, #0f1a2000, #000000ee);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    height: 38.5rem;
+}
+
+.mainRegister p {
+    font-family: var(--Anton);
+    font-size: 28px;
+    color: #d9d9d9d0;
+    word-spacing: .2rem;
+}
+
+.listRegister {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    gap: 2rem;
+}
+
+.titleForBtn h2 {
+    font-family: var(--Monoton);
+    font-size: 26px;
+    font-weight: lighter;
+}
+
+.titleForBtn div {
+    height: 2px;
+    width: 60px;
+    background-color: var(--Scarlet);
+    margin: auto;
+}
+
+.listRegister img {
+    width: 50%;
+}
+
+.listRegister button {
+    border: none;
+    background-color: transparent;
+    margin-top: 1.5rem;
+}
+
+@media(max-width: 750px) {
+    .mainRegister {
+        height: 30.3rem;
+    }
+
+    .mainRegister p {
+        font-size: 17px;
+    }
+
+    .titleForBtn h2 {
+        font-size: 17px;
+    }
+
+    .titleForBtn div {
+        height: 3px;
+        width: 40px;
+    }
+
+    .listRegister img {
+        width: 60%;
+    }
+}

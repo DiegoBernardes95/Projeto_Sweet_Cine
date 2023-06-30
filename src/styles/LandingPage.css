@@ -1,0 +1,193 @@
+/* NAVBAR DA PÁGINA */
+.landingPageNavbar{
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+    background: #d9d9d9;
+    text-align: center;
+}
+.landingPageNavbar p{
+    margin: auto;
+    font-family: var(--Monoton);
+    color: var(--Scarlet);
+    font-weight: bold;
+    font-size: 18px;
+    transform: translateY(3px);
+}
+.landingPageNavbar p span{
+    font-family: var(--Zeyada);
+    font-size: 26px;
+    color: #000;
+    font-weight: lighter;
+    margin-left: 6px;
+}
+
+/* CORPO DA PÁGINA */
+.landingPageBody{
+    width: 100%;
+    padding: 2.5rem 0 2.5rem 0;
+    /* background: url("/public/gif_cine_noir.gif") #0f1a20d8; */
+    background: url(/public/retro-film.png) #000000cc;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+/* MARGEM AUTOMÁTICA DEFINIDA PARA MÚLTIPLAS CLASSES  */
+:is(.landingPageHeader, .landingPageTexts, .landingPageBtn){
+    margin: auto;
+}
+
+/* CABEÇALHO DA PÁGINA */
+.landingPageHeader{
+    font-family: var(--Monoton);
+    font-size: 20px;
+    color: #fff;
+    width: 70%;
+}
+.landingPageHeader h1{
+    font-weight: normal;
+}
+.landingPageHeader h1:nth-child(2){
+    margin-left: 7.8rem;
+    color: var(--Scarlet);  
+}
+.landingPageHeader div{
+    width: 14.5rem;
+    height: 4px;
+    background-color: var(--Scarlet);
+}
+.landingPageHeader p{
+    font-family: var(--Zeyada);
+    font-size: 25px;
+    padding-top: 6px;
+    width: 14.5rem;
+    text-align: center;
+}
+
+/* CONTEÚDO PRINCIPAL DA PÁGINA */
+.landingPageTexts{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    padding: 2rem;
+    font-family: var(--cutiveMono);
+    font-size: 18.5px;
+    text-shadow: 2px 2px #000;
+    color: #fff;
+    background-color: #d9d9d922;
+    width: 67%;
+    height: auto;
+    /* box-shadow: 10px 7px 41px 8px #0f1a20d8; */
+    border-radius: 5px;
+    line-height: 1.2;
+    transform: translateY(-18px);
+}
+.landingPageTexts p:nth-child(1)::first-letter{
+    font-size: 50px;
+    text-shadow: 1px 1px #fff;
+    color: var(--Scarlet);
+    font-weight: bold;
+}
+
+/* BOTÃO PARA ACESSAR A FERRAMENTA */
+.landingPageBtn{
+    font-family: var(--cutiveMono);
+    background-color: #ff3f3fd0;
+    border-radius: 5px;
+    color: #fff;
+    border: 0 solid;
+    padding: .2rem 1.5rem .2rem 1.5rem;
+    transform: scale(1.1);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.landingPageBtn:hover{
+    background-color: var(--Scarlet);
+    transition: .5s all ease-in-out;
+}
+
+/* FOOTER DA PÁGINA */
+.landingPageFooter{
+    background: #d9d9d9;
+    padding: 2rem;
+    
+}
+.landingPageFooterLists{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.landingPageFooterLists ul{
+    margin: 0;
+    padding: 0;
+}
+.lPFooter{
+    color: #000;
+}
+.landingPageFooterLists ul li{
+    list-style: none;
+    font-family: var(--cutiveMono);
+    cursor: pointer;
+    
+}
+.landingPageFooterLists ul h4{
+    margin-bottom: 18px;
+    font-family: var(--Monoton);
+    color: var(--Scarlet);
+    font-weight: lighter;
+}
+.landingPageFooterLists ul li:nth-child(3){
+    margin: 10px 0 10px 0;
+}
+
+
+/* CONFIGURAÇÕES DA RESPONSIVIDADE */
+@media(max-width: 1100px){
+    /* RESPONSIVIDADE DO NAVBAR, HEADER E MAIN */
+    .landingPageNavbar p{
+        font-size: 14px;
+    }
+    .landingPageNavbar p span{
+        font-size: 20px;
+    }
+    .landingPageHeader h1:nth-child(2){
+        margin-left: 5.8rem;
+    }
+    :is(.landingPageHeader div, .landingPageHeader p){
+        width: 11.2rem;
+    }
+    .landingPageTexts, .landingPageHeader{
+        width: 92%;
+        font-size: 16px;
+    }
+    .landingPageHeader p{
+        font-size: 20px;
+    }
+    .landingPageBtn{
+        transform: scale(1);
+        font-size: 14px;
+    }
+    
+}
+@media(max-width: 800px) {
+    /* RESPONSIVIDADE DO FOOTER */
+    .landingPageFooterLists h4{
+        font-size: 14px;
+    }
+    .landingPageFooterLists{
+        font-size: 14px;
+        
+    }
+    .landingPageFooterLists{
+        text-align: center;
+        gap: 2rem;
+    }
+}

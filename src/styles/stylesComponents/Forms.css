@@ -1,0 +1,194 @@
+.formMain {
+    width: 24rem;
+    padding: 2.2rem 1.5rem 2.2rem 1.5rem;
+    border: 1px solid #ff3f3f;
+    border-radius: 15px;
+    background: #00000071;
+    transform: scale(1.1);
+    margin: auto;
+}
+
+.btnForm,
+.btnForm2 {
+    margin: auto;
+    font-family: var(--cutiveMono);
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff3f3fbc;
+    padding: 0 .8rem 0 .8rem;
+    border-radius: 5px;
+    border: none;
+}
+
+:is(.btnForm, .btnForm2):hover {
+    background-color: var(--Scarlet);
+    transition: all .5s ease;
+    transform: scale(1.1);
+}
+
+.btnForm2 {
+    margin-top: 8px;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.closeBtn img {
+    width: 20px;
+}
+
+/* CONFIGURAÇÕES COMPARTILHADAS */
+:is(.loginMain, .formLogin, .formLogin label, .formCurrent, .formCurrentPartOne, .formCurrentPartOne label, .formCurrentPartTwo) {
+    display: flex;
+    flex-direction: column;
+}
+
+:is(.loginMain, .formCurrentMain) h1 {
+    font-family: var(--Monoton);
+    text-align: center;
+}
+
+/* FIM DAS CONFIGURAÇÕES COMPARTILHADAS */
+
+/* FORMULÁRIO DE FILME e CINEMA */
+
+.formCurrentMain h1 {
+    font-size: 23px;
+    transform: translateY(-1rem);
+}
+
+.formCurrent::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+.formCurrent {
+    height: 19rem;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.formCurrent input {
+    outline: none;
+    padding-left: 4px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #ffffff42;
+}
+
+.formCurrent textarea,
+.formCurrent select {
+    background-color: transparent;
+    color: #fff;
+}
+
+.formCurrent select option {
+    background: #000;
+}
+
+/* INPUT DO NOME DO USUÁRIO */
+.currentInputName {
+    margin-top: 25px;
+}
+
+.currentInputName h1 {
+    font-size: 18px;
+}
+
+.inputName input {
+    height: 2rem;
+    font-family: var(--Anton);
+    color: #d9d9d9;
+}
+
+.inputName {
+    height: auto;
+}
+
+/* FIM DO INPUT DO USUÁRIO */
+
+.formCurrent span{
+    font-family: var(--Anton);
+    color: #ff3f3f;
+}
+
+.formCurrent,
+.formCurrentPartOne,
+.formCurrentPartTwo {
+    gap: .4rem;
+}
+
+.formCurrent label,
+.formSelect {
+    font-family: var(--Tsukimi);
+    font-size: 12.4px;
+    gap: .2rem;
+}
+
+.formCurrentPartTwo label,
+.formCurrentPartThree,
+.formCurrentPartThree label,
+.formCurrentTextArea label {
+    display: flex;
+}
+
+.formCurrentPartTwo input {
+    width: 11.3rem;
+}
+
+.formCurrentPartTwo select,
+.formSelect {
+    width: 100%;
+    text-overflow: ellipsis;
+    outline: none;
+    text-align: center;
+}
+
+.formCurrentPartThree input {
+    width: 3rem;
+}
+
+.formCurrentPartThree {
+    gap: 6px;
+}
+
+.formCurrentPartThree select {
+    outline: none;
+    width: 11.4rem;
+    font-family: var(--Tsukimi);
+    font-size: 12.4px;
+}
+.formCurrent textarea::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;
+}
+
+/* Altera a cor padrão do botão do input do calendário */
+.formCurrent input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+
+.formCurrentTextArea label {
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.formCurrentTextArea textarea,
+.formCurrentPartOne textarea {
+    max-height: 9rem;
+    min-height: 9rem;
+    outline: none;
+    padding-left: 4px;
+}
+
+.formSelect {
+    background-color: #d9d9d9;
+}
+
+/* FIM DO FORMULÁRIO DE FILMES e CINEMAS */

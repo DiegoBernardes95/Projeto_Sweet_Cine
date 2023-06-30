@@ -1,0 +1,46 @@
+/* FOOTER DA PÁGINA */
+.globalFooter{
+    background: linear-gradient(#000000d0, #0f1a20);
+    padding: 2rem;
+    color: #fff;
+    
+}
+.FooterLists{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.FooterLists ul{
+    margin: 0;
+    padding: 0;
+}
+.FooterLists ul li{
+    list-style: none;
+    font-family: var(--cutiveMono);
+    cursor: pointer;
+    
+}
+.FooterLists ul h4{
+    margin-bottom: 18px;
+    font-family: var(--Monoton);
+    color: var(--Scarlet);
+    font-weight: lighter;
+}
+.FooterLists ul li:nth-child(3){
+    margin: 10px 0 10px 0;
+}
+
+@media(max-width: 800px) {
+    /* RESPONSIVIDADE DO FOOTER */
+    .FooterLists h4{
+        font-size: 14px;
+    }
+    .FooterLists{
+        font-size: 14px;
+        
+    }
+    .FooterLists{
+        text-align: center;
+        gap: 2rem;
+    }
+}

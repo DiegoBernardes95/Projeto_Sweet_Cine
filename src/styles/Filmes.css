@@ -1,0 +1,304 @@
+.Filmes{
+    display: flex;
+}
+
+/* HEADER DA PÁGINA DE FILMES */
+li a{
+    text-decoration: none;
+    color: #fff;
+}
+.lastMovies{
+    display: flex;
+    height: 41.5rem;
+    text-align: center;
+}
+.infoLastMovie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    font-family: var(--Tsukimi);
+    font-size: 20px;
+    width: 40%;
+    z-index: 5;
+    padding: 1rem;
+}
+
+.infoLastMovie p{
+    line-height: 2rem;
+}
+
+.titleMovie img{
+    width: 20px;
+    margin-right: 5px;
+}
+.titleMovie p:nth-child(1){
+    font-family: var(--Anton);
+    font-size: 27px;
+}
+.infoLastMovie p:nth-child(3){
+    font-size: 16px;
+}
+
+.moldPoster{
+    background: linear-gradient(#0f1a2049, #000000f3);
+    z-index: 4;
+}
+.PosterMovie{
+    z-index: 3;
+}
+.PosterMovie, .moldPoster{
+    width: 100%;
+    height: 39rem;
+    position: absolute;
+    overflow: hidden;
+}
+.PosterMovie img{
+    width: 95.5rem;
+    height: 40rem;
+}
+
+.defaultImgError{
+    position: absolute;
+    height: 40rem;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+}
+.defaultImgError img{
+    width: 15rem;
+    height: 14rem;
+    margin: auto;
+    z-index: 10;
+}
+
+/* FIM DO HEADER DA PÁGINA DE FILMES */
+
+/* PARTE PRINCIPAL DA PÁGINA DE FILMES */
+.myMovies{
+    background: linear-gradient(#000000ec, #0f1a2000);
+    padding-bottom: 8rem;
+}
+
+.titleMainMovie{
+    padding: 3rem 0 4rem 0;
+    text-align: center;
+}
+.titleMainMovie h1{
+    font-size: 25px;
+    font-family: var(--cutiveMono);
+}
+.titleMainMovie span{
+    font-family: var(--Anton);
+    color: #ff3f3f;
+    font-size: 40px;
+}
+.titleMainMovie p{
+    margin: 3rem 0 0 0;
+    font-size: 19px;
+    font-family: var(--Tsukimi);
+    font-weight: bold;
+    color: #d9d9d9;
+}
+
+.listMovies{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: .2rem;
+    margin: auto;
+    border-radius: 5px;
+    gap: .8rem;
+}
+.listMovies li{
+    transition: all .4s ease-in-out;
+    z-index: 1;
+}
+.listMovies li:hover{
+    scale: 1.1;
+    transition: all .4s ease-in-out;
+    z-index: 2;
+}
+.listMovies h3{
+    font-size: 22px;
+    font-family: var(--Tsukimi);
+    font-weight: bold;
+}
+:is(.listMovies, .listMoviesGenre) li img{
+    width: 200px !important;
+    height: 300px;
+    z-index: 2;
+    position: relative;
+}
+:is(.listMovies, .listMoviesGenre) li img:hover{
+    z-index: 0;
+}
+
+.btnFullList{
+    display: flex;
+    justify-content: center;
+    transform: translateY(35px);
+    transition: all .4s ease-in-out;
+}
+.btnFullList a{
+   background-color: transparent;
+   color: #fff;
+   text-decoration: none;
+   border: 2px solid #fff;
+   padding: 0 1.5rem 0 1.5rem;
+   border-radius: 10px;
+   
+}
+.btnFullList a:hover{
+    background-color: #d9d9d9;
+    color: #000;
+    transition: all .4s ease-in-out;
+}
+
+/* FIM DA PARTE PRINCIPAL DA PÁGINA DE FILMES  */
+
+/* SEÇÃO DE GÊNEROS */
+
+.sectionGenre{
+    background: linear-gradient(#0f1a2000, #000000);
+    padding-bottom: 4rem;
+}
+
+.titleGenre{
+    text-align: center;
+    padding: 4rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-family: var(--Tsukimi);
+    font-size: 20px;
+}
+
+.listGenre{
+    width: 60%;
+}
+.carouselContent{
+    width: 40%;
+    margin: auto;
+}
+.carouselImg h3{
+    position: absolute;
+    margin: 60% auto;
+    width: 100%;
+    letter-spacing: 1px;
+    font-family: var(--Anton);
+    z-index: 2;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.carouselImg{
+    border: 2px solid #d9d9d9;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.carouselImg img{
+    width: 100%;
+    opacity: 0.6;
+}
+
+.titleMoviesGenre{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 4rem 0 4rem 0; 
+    font-family: var(--Monoton);
+    font-size: 30px;
+}
+.listMoviesGenre{
+    list-style: none;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+.contentListGenre{
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .8rem;
+}
+
+#theContentListGenre{
+    transition: all .4s ease-in-out;
+    z-index: 1;
+}
+#theContentListGenre:hover{
+    scale: 1.1;
+    transition: all .4s ease-in-out;
+    z-index: 2;
+}
+
+.btnFullList2{
+    transform: translateY(0);
+    margin-top: 1.5rem;
+}
+
+.defaultGenre{
+    font-family: var(--Tsukimi);
+    translate: 0 -30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.defaultGenre h3{
+    font-size: 22px;
+}
+
+.defaultGenre img{
+    width: 80px;
+    margin: auto;
+}
+
+/* FIM DA SEÇÃO DE GÊNEROS */
+
+/* RESPONSIVO */
+@media(max-width: 700px) {
+    .listGenre{
+        width: 90%;
+    }
+}
+@media(max-width: 900px){
+    .infoLastMovie{
+        width: 65%;
+    }
+    .titleMovie img{
+        width: 20px;
+    }
+
+    .moldContent{
+        display: none;
+    }
+    :is(.listMovies, .listMoviesGenre) li img{
+        width: 160px !important;
+        height: 210px;
+    }
+    .titleGenre, .titleMainMovie h1:nth-child(1), .listMoviesGenre div h3{
+        font-weight: bold;
+    }
+    .titleGenre, .titleMainMovie{
+        padding: 4rem;
+        font-size: 14.2px;
+    }
+    .titleMainMovie p{
+        font-size: 16px;
+    }
+    .titleMainMovie h1{
+        font-size: 25px;
+    }
+    .titleMainMovie h1:nth-child(1), .listMoviesGenre div h3, .infoLastMovie, .titleMovie p:nth-child(1){
+        font-size: 19px;
+    }
+}

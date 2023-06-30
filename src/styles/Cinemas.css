@@ -1,0 +1,277 @@
+.Cinema{
+    display: flex;
+}
+
+/* PARTE PRINCIPAL DA PÁGINA DE CINEMAS */
+
+:is(.contentCinemas, .ulCinemas, .buttons){
+    display: flex;
+}
+
+.lastCine{
+    height: 41.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(#000, #0f1a2000, #000);
+}
+.lastCine img{
+    height: 20rem;
+    width: 20rem;
+}
+.lastCine h1{
+    font-family: var(--Anton);
+    color: #d9d9d9;
+}
+.lastCine p{
+    font-family: var(--cutiveMono);
+    color: #ffd700;
+}
+.lastCine p:nth-child(3), .lastCine p:nth-child(5){
+    margin-top: 2rem;
+}
+.lastCine h1:nth-child(2){
+    font-size: 50px;
+}
+.lastCine h1:nth-child(4){
+    font-size: 30px;
+}
+.lastCine h1:nth-child(6){
+    font-size: 28px;
+}
+
+
+.titleMain{
+    padding: 0 0 2rem 0;
+    text-align: center;
+}
+.titleMain h1{
+    font-size: 30px;
+    font-family: var(--cutiveMono);
+    margin-bottom: 2rem;
+}
+.titleMain span{
+    font-size: 40px;
+    font-family: var(--Anton);
+    color: #ff3f3f;
+}
+.titleMain p{
+    font-family: var(--Tsukimi);
+    font-size: 18px;
+}
+
+.ulCinemas{
+    flex-wrap: wrap;
+    gap: 2.8rem;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+
+.cineInfoContent{
+    padding: .7rem 0 0 0;
+    text-align: center;
+    line-height: 1rem;
+    width: 20rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1rem;
+}
+.cineInfoContent2 p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cineInfoContent2 p:nth-child(1){
+    font-family: var(--Anton);
+    color: #ffd700;
+}
+.cineInfoContent2 p:nth-child(2){
+    font-family: var(--cutiveMono);
+    font-size: 15px;
+}
+
+
+.buttons{
+    gap: 1.5rem;
+    justify-content: center;
+}
+.buttons button{
+    background: transparent;
+    border: none;
+} 
+.buttons img, #btnDescription{
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.defaultCineError{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--Tsukimi);
+    font-size: 18px;
+    transform: translateY(20px);
+}
+.defaultCineError img{
+    width: 160px;
+}
+
+/* FIM DA PARTE PRINCIPAL DA PÁGINA DE CINEMAS */
+
+/* SESSÃO DE FILMES ASSISTIDOS POR CINEMA */
+
+.sectionFilmesPorCinema{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 4rem 2rem 4rem 2rem;
+    background: linear-gradient(#000, #0f1a2000, #000000c1);
+}
+.descriptionSectionMovies{
+    text-align: center;
+    font-family: var(--Tsukimi);
+    font-size: 18px;
+}
+.listSection{
+    display: flex;
+    width: 17rem;
+    height: 9rem;
+}
+.listSection p{
+    font-size: 18px;
+}
+.sectionList{
+    width: 90%;
+    margin-top: 2.5rem;
+    gap: 2rem;
+}
+.sectionList li{
+    transition: all .4s ease-in-out;
+}
+.sectionList li:hover{
+    scale: 1.1;
+    transition: all .4s ease-in-out;
+}
+.sectionList h3{
+    font-family: var(--Anton);
+}
+.cineContent2{
+    width: 13.5rem;
+    background: #d9d9d91b;
+}
+.cineContent2 img{
+    width: 100%;
+    height: 8rem;
+    cursor: pointer;
+}
+.cineInfoContent2{
+    width: 100%;
+    padding: 1rem;
+    font-family: var(--cutiveMono);
+}
+.cineInfoContent2 p:nth-child(2){
+    font-family: var(--Anton);
+    color: #d9d9d9;
+}
+.cineInfoContent2 p:nth-child(3){
+    font-size: 14.7px;
+    padding: .8rem 0 .8rem 0;
+}
+
+.titleUlListFull{
+    text-align: center;
+}
+
+.titleUlListFull{
+    width: 80%;
+    padding: 3rem 0 3rem 0;
+}
+.listFullMoviesCine{
+    width: 80%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .8rem;
+}
+
+.listFullMoviesCine li img{
+    width: 180px;
+    height: 250px;
+    position: relative;
+    z-index: 2;
+}
+
+.listFullMoviesCine li{
+    transition: all .4s ease-in-out;
+}
+.listFullMoviesCine li:hover{
+    scale: 1.1;
+    transition: all .4s ease-in-out;
+}
+
+.listFullEmpty{
+    transform: translateY(-1px);
+    text-align: center;
+}
+.listFullEmpty img{
+    width: auto !important;
+    height: 10rem !important;
+}
+.btnMoreMoviesCine{
+    background-color: unset;
+    color: #fff;
+    padding: 0 2rem 0 2rem;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+.btnMoreMoviesCine:hover{
+    background-color: #fff;
+    color: #000;
+    transition: all .4s ease-in-out;
+}
+
+/* FIM DA SESSÃO DE FILMES ASSISTIDOS POR CINEMA */
+
+@media (max-width: 1000px) {
+    .headerCinemas{
+        flex-direction: column;
+    }
+    .cineContent2{
+        width: 11rem;
+    }
+    .cineContent2 img{
+        height: 7rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .titleMain{
+        padding: 0 0 3.5rem 0;
+    }
+    .titleMain h1{
+        font-size: 20px;
+    }
+    .titleMain span{
+        font-size: 30px;
+    }
+    .titleMain p{
+        font-size: 15px;
+    }
+    .imgCine img{
+        width: 11rem;
+        height: 7rem;
+    }
+    .listFullMoviesCine li img{
+        width: 160px;
+        height: 210px;
+    }
+}
