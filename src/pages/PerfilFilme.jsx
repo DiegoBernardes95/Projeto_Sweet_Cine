@@ -208,6 +208,7 @@ const PerfilFilme = () => {
                                 <p>{movieForId.ingresso ? "R$" + movieForId.ingresso.toFixed(2).replace(".", ",") : "Desconhecido"}</p>
                             </li>
                         </ul>
+                        <TitleLoading />
                     </div>
                     <Footer />
                 </main>
