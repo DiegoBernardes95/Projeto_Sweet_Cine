@@ -123,16 +123,19 @@
     padding: 1rem 4rem 1rem 4rem;
     background: #ff3f3f2d;
 }
+.paragraphs, .sinopseContent p::first-letter{
+    margin-left: 2rem;
+}
 :is(.paragraphComment, .sinopseContent) p{
     font-family: var(--Tsukimi);
     font-size: 16px;
     line-height: 1.5rem;
 }
 :is(.paragraphComment, .sinopseContent) p::first-letter{
-    margin-left: 2rem;
     font-size: 50px;
     font-weight: bolder;
 }
+
 
 .infosPerfilFilme{
     display: flex;

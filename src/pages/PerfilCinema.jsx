@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../styles/PerfilCinema.css"
@@ -111,6 +112,20 @@ const PerfilCinema = () => {
         moviesSorted.sort((filmeA, filmeB) => filmeA.nota - filmeB.nota).reverse()
     }
 
+    // FORMATAR TEXTO DE COMENTÁRIO
+    const fornatedText = () => {
+        if(cinemaForId.comentario){
+            return cinemaForId.comentario.split('\n').map(line => (
+                <React.Fragment>
+                    {line}
+                    <br />
+                </React.Fragment>
+            ))
+        }
+        return "Sem comentários..."
+    }
+
+
     return (
         <div>
             <ModalComponent state={showModal} modalContent={!showLoading ? <Forms setCloseModal={setShowModal} formContent={whatForm ? <FormCinema setShowLoading={setShowLoading} whatForm={whatForm} id={cinemaForId.id} nome={cinemaForId.nome} bairro={cinemaForId.bairro} cidade={cinemaForId.cidade} estado={cinemaForId.estado} foto_do_cinema={cinemaForId.foto_do_cinema} comentario={cinemaForId.comentario} nota={cinemaForId.nota} /> : <DelRegister setShowLoading={setShowLoading} closeModal={setShowModal} id={cinemaForId.id} />} /> : <TitleLoading animationHere={true} />} />
@@ -159,7 +174,7 @@ const PerfilCinema = () => {
                                 setWhatForm(false);
                             }}><img src={btnDelete} alt="" /></button>
                         </div>
-                        <cite>{cinemaForId.comentario ? cinemaForId.comentario : "Sem comentários..."}</cite>
+                        <cite>{fornatedText()}</cite>
                     </div>
                     <div ref={placar} className="placarCine">
                         <div ref={placarTotalFilmes}>

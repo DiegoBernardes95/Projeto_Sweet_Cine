@@ -17,6 +17,7 @@ import TitleLoading from '../components/TitleLoading';
 import ListNotas from '../components/ListNotas';
 import VanillaTilt from 'vanilla-tilt';
 import ScrollReveal from 'scrollreveal';
+import React from 'react';
 
 const PerfilFilme = () => {
     const { id } = useParams();
@@ -65,19 +66,19 @@ const PerfilFilme = () => {
     }, [movieForId])
 
     const scrollToCapa = () => {
-        headerPerfilFilme.current.scrollIntoView({behavior: "smooth"});
+        headerPerfilFilme.current.scrollIntoView({ behavior: "smooth" });
     }
 
     const scrollToSinopse = () => {
-        sinopseContent.current.scrollIntoView({behavior: "smooth"});
+        sinopseContent.current.scrollIntoView({ behavior: "smooth" });
     }
 
     const scrollToComment = () => {
-        comentarioContent.current.scrollIntoView({behavior: "smooth"});
+        comentarioContent.current.scrollIntoView({ behavior: "smooth" });
     }
 
     const scrollToInfo = () => {
-        infoContent.current.scrollIntoView({behavior: "smooth"});
+        infoContent.current.scrollIntoView({ behavior: "smooth" });
     }
 
     // Animação 3D com VanillaTilt
@@ -90,25 +91,25 @@ const PerfilFilme = () => {
     VanillaTilt.init(genero.current, {
         scale: 1.1,
         reverse: true,
-        glare: true, 
+        glare: true,
         "max-glare": 0.5
     })
     VanillaTilt.init(cinema.current, {
         scale: 1.1,
         reverse: true,
-        glare: true, 
+        glare: true,
         "max-glare": 0.5
     })
     VanillaTilt.init(valor.current, {
         scale: 1.1,
         reverse: true,
-        glare: true, 
+        glare: true,
         "max-glare": 0.5
     })
     VanillaTilt.init(data.current, {
         scale: 1.1,
         reverse: true,
-        glare: true, 
+        glare: true,
         "max-glare": 0.5
     })
     VanillaTilt.init(imgPoster.current, {
@@ -122,22 +123,35 @@ const PerfilFilme = () => {
     // Efeito de Scroll
 
     useEffect(() => {
-        ScrollReveal({reset: true}).reveal(".asideLateral", {
-            origin: "left", 
+        ScrollReveal({ reset: true }).reveal(".asideLateral", {
+            origin: "left",
             distance: "100px",
             duration: 1000
         })
     }, [])
 
+    // FORMATAÇÃO DO TEXTO
+    const formatComment = () => {
+        if (movieForId.comentario) {
+            return movieForId.comentario.split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                    <span className='paragraphs'>{line}</span>
+                    <br />
+                </React.Fragment>
+            ));
+        }
+        return "Sem comentários...";
+    };
+
     return (
         <>
-            <ModalComponent state={showModal} modalContent={!showLoading ?<Forms setCloseModal={setShowModal} showCadCine={setShowCadCine} formContent={!showModalDelete ? (!showCadCine ? <FormFilme setShowLoading={setShowLoading} id={movieForId.id} idCinema={movieForId.idCinema} cinema_assistido={movieForId.cinema_assistido} titulo={movieForId.titulo} poster={movieForId.poster} capa={movieForId.capa} genero={movieForId.genero} data_view={movieForId.data_view} ingresso={movieForId.ingresso} comentario={movieForId.comentario} sinopse={movieForId.sinopse} nota={movieForId.nota} toForm={false} setCadCine={setShowCadCine} /> : <FormCinema setShowLoading={setShowLoading}/>) : <DelRegister setShowLoading={setShowLoading} whatDel={true} id={movieForId.id} poster={movieForId.poster} titulo={movieForId.titulo} closeModal={setShowModal} />} /> : <TitleLoading animationHere={true}/>} />
+            <ModalComponent state={showModal} modalContent={!showLoading ? <Forms setCloseModal={setShowModal} showCadCine={setShowCadCine} formContent={!showModalDelete ? (!showCadCine ? <FormFilme setShowLoading={setShowLoading} id={movieForId.id} idCinema={movieForId.idCinema} cinema_assistido={movieForId.cinema_assistido} titulo={movieForId.titulo} poster={movieForId.poster} capa={movieForId.capa} genero={movieForId.genero} data_view={movieForId.data_view} ingresso={movieForId.ingresso} comentario={movieForId.comentario} sinopse={movieForId.sinopse} nota={movieForId.nota} toForm={false} setCadCine={setShowCadCine} /> : <FormCinema setShowLoading={setShowLoading} />) : <DelRegister setShowLoading={setShowLoading} whatDel={true} id={movieForId.id} poster={movieForId.poster} titulo={movieForId.titulo} closeModal={setShowModal} />} /> : <TitleLoading animationHere={true} />} />
             <Navbar />
             <div className='PerfilFilme'>
                 <aside className='asideLateral'>
                     <nav className='contentLateral contentLateralFilme'>
                         <figure>
-                            {movieForId.poster ? <img ref={imgPoster} src={movieForId.poster} alt="" /> : <img src="https://img.freepik.com/vetores-gratis/glitch-error-404-page_23-2148105404.jpg?w=2000" alt=""/>}
+                            {movieForId.poster ? <img ref={imgPoster} src={movieForId.poster} alt="" /> : <img src="https://img.freepik.com/vetores-gratis/glitch-error-404-page_23-2148105404.jpg?w=2000" alt="" />}
                         </figure>
                         <ul className='listContentLateral'>
                             <li><button onClick={scrollToCapa}>Capa</button></li>
@@ -159,15 +173,15 @@ const PerfilFilme = () => {
                             <div className='textContent'>
                                 <h1>{movieForId.titulo ? movieForId.titulo : "Titulo não encontrado"}</h1>
                                 <div>
-                                    {movieForId.nota ? 
-                                    <div>
-                                        <span className='d-flex gap-2 mb-2 justify-content-center'>
-                                            {listStars.map(stars => stars )}
-                                        </span>
-                                        <span className='formatNota'>{<ListNotas index={movieForId.nota}/>}</span>
-                                    </div>
-                                    : 
-                                    <p>Sem avaliação disponível</p>}
+                                    {movieForId.nota ?
+                                        <div>
+                                            <span className='d-flex gap-2 mb-2 justify-content-center'>
+                                                {listStars.map(stars => stars)}
+                                            </span>
+                                            <span className='formatNota'>{<ListNotas index={movieForId.nota} />}</span>
+                                        </div>
+                                        :
+                                        <p>Sem avaliação disponível</p>}
                                 </div>
                             </div>
                         </div>
@@ -183,7 +197,7 @@ const PerfilFilme = () => {
                         </div>}
                         <svg ref={comentarioContent} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff3f3f2d" fill-opacity="1" d="M0,160L48,165.3C96,171,192,181,288,170.7C384,160,480,128,576,101.3C672,75,768,53,864,64C960,75,1056,117,1152,117.3C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
                         <div className='paragraphComment'>
-                            <p><cite>{movieForId.comentario ? movieForId.comentario : "Sem comentários..."}</cite></p>
+                            <p><cite>{formatComment()}</cite></p>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ff3f3f2d" fill-opacity="1" d="M0,224L48,197.3C96,171,192,117,288,96C384,75,480,85,576,112C672,139,768,181,864,218.7C960,256,1056,288,1152,282.7C1248,277,1344,235,1392,213.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
                         <ul ref={infoContent} className='infosPerfilFilme'>
