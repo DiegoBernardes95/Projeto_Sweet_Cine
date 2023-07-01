@@ -35,6 +35,7 @@ body{
   background-color: #000000b9;
   background-attachment: fixed;
   color: #fff;
+  overflow-y: hidden;
 }
 
 /* TÍTULOS PARA AS SEÇÕES DO SITE */
@@ -67,7 +68,7 @@ body{
 }
 .asideLateral{
   width: 30rem;
-  height: 89vh;
+  height: 90.9vh;
   background: linear-gradient(#0f1a20c2, #000000);
   justify-content: center;
   overflow-y: auto;
@@ -119,7 +120,7 @@ body{
 
 .mainLateral{
     width: 100%;
-    height: 89vh;
+    height: 90.9vh;
     overflow: auto;
     overflow-x: hidden;
 }

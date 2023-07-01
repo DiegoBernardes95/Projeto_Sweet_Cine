@@ -40,7 +40,7 @@ const Navbar = () => {
                                 <Link to={`/Home/${sessionStorage.getItem("name")}`} class="nav-link">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link to="/Novo_Registro" class="nav-link">+ Registro</Link>
+                                <Link to="/Novo_Registro" class="nav-link">Registro</Link>
                             </li>
                             <li class="nav-item">
                                 <Link to="/Filmes" class="nav-link">Filmes</Link>

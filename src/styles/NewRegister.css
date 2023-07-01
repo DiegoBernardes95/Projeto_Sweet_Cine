@@ -2,6 +2,9 @@
     width: 100%;
     color: #fff;
 }
+.NewRegister{
+    display: flex;
+}
 
 .mainRegister {
     background: linear-gradient(#000000ee, #0f1a2000, #000000ee);

@@ -25,39 +25,45 @@ const NewRegister = () => {
     }
 
     const cadFilme = () => {
-        setShowModal(true);     
+        setShowModal(true);
     }
 
     useEffect(() => {
-        ScrollReveal({reset: true}).reveal('.forScrollCine', {
+        ScrollReveal({ reset: true }).reveal('.forScrollCine', {
             origin: "left",
             distance: '50px',
             duration: 2400
         })
 
-        ScrollReveal({reset: true}).reveal('.forScrollFilme', {
+        ScrollReveal({ reset: true }).reveal('.forScrollFilme', {
             origin: "right",
             distance: "50px",
             duration: 2400
         })
 
-        ScrollReveal({reset: true}).reveal('.forScrollParagraph', {
+        ScrollReveal({ reset: true }).reveal('.forScrollParagraph', {
             origin: "top",
             distance: "30px",
             duration: 2000
         })
 
-       
-        ScrollReveal({reset: true}).reveal('.forScrollTitleFilme', {
+
+        ScrollReveal({ reset: true }).reveal('.forScrollTitleFilme', {
             origin: "right",
             distance: "60px",
             duration: 2000
         })
-   
-        ScrollReveal({reset: true}).reveal('.forScrollUnderlineFilme', {
+
+        ScrollReveal({ reset: true }).reveal('.forScrollUnderlineFilme', {
             origin: "left",
             distance: "40px",
             duration: 2500
+        })
+
+        ScrollReveal({reset: true}).reveal(".asideLateral", {
+            origin: "left",
+            distance: "100px",
+            duration: 1000
         })
     }, [])
 
@@ -84,31 +90,45 @@ const NewRegister = () => {
     }, [])
 
 
-    return(
-        
+    return (
+
         <div className="globalRegister">
-            <ModalComponent state={showModal} modalContent={!showLoading ? <Forms setCloseModal={setShowModal} showCadCine={setShowCadCine} formContent={!showCadCine ? <FormFilme setShowLoading={setShowLoading} setCadCine={setShowCadCine} toForm={true}/> : <FormCinema setShowLoading={setShowLoading} whatForm={false}/>}/> : <TitleLoading animationHere={true}/>}/>
+            <ModalComponent state={showModal} modalContent={!showLoading ? <Forms setCloseModal={setShowModal} showCadCine={setShowCadCine} formContent={!showCadCine ? <FormFilme setShowLoading={setShowLoading} setCadCine={setShowCadCine} toForm={true} /> : <FormCinema setShowLoading={setShowLoading} whatForm={false} />} /> : <TitleLoading animationHere={true} />} />
             <Navbar />
-            <main className="mainRegister">
-                <p className='forScrollParagraph'>Escolha uma das opções abaixo:</p>
-                <ul className="listRegister">
-                    <li className='forScrollCine'>
-                        <div className="titleForBtn">
-                            <h2 className='forScrollTitle'>Cinema</h2>
-                            <div className='forScrollUnderline'></div>
-                        </div>
-                        <button><img ref={imgCine} onClick={cadCine} src={cinema} alt="" /></button>
-                    </li>
-                    <li className='forScrollFilme'>
-                        <div className="titleForBtn">
-                            <h2 className='forScrollTitleFilme'>Filme</h2>
-                            <div className='forScrollUnderlineFilme'></div>
-                        </div>
-                        <button><img ref={imgFilme} onClick={cadFilme} src={filme} alt="" /></button>
-                    </li>
-                </ul>   
-            </main>   
-            <Footer />
+            <div className='NewRegister'>
+                <aside className='asideLateral'>
+                    <nav className='contentLateral'>
+                        <h1>Registro</h1>
+                        <ul className='listContentLateral'>
+                            <li><button onClick={cadCine}>Registrar cinema</button></li>
+                            <li><button onClick={cadFilme}>Registrar filme</button></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <main className='mainLateral'>
+                    <div className="mainRegister">
+                        <p className='forScrollParagraph'>Escolha uma das opções abaixo:</p>
+                        <ul className="listRegister">
+                            <li className='forScrollCine'>
+                                <div className="titleForBtn">
+                                    <h2 className='forScrollTitle'>Cinema</h2>
+                                    <div className='forScrollUnderline'></div>
+                                </div>
+                                <button><img ref={imgCine} onClick={cadCine} src={cinema} alt="" /></button>
+                            </li>
+                            <li className='forScrollFilme'>
+                                <div className="titleForBtn">
+                                    <h2 className='forScrollTitleFilme'>Filme</h2>
+                                    <div className='forScrollUnderlineFilme'></div>
+                                </div>
+                                <button><img ref={imgFilme} onClick={cadFilme} src={filme} alt="" /></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <Footer />
+                </main>
+            </div>
+
         </div>
     )
 }
