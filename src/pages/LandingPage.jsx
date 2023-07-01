@@ -2,7 +2,6 @@ import "../styles/LandingPage.css";
 import ModalComponent from "../components/ModalComponent";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Typewriter from "typewriter-effect";
 import AnimatedLoading from "../components/AnimatedLoading";
 import Forms from "../components/Forms";
 import UserName from "../components/UserName";
@@ -22,7 +21,9 @@ const LandingPage = () => {
             })
             .catch(() => {
                 setCheckDb(false);
-            });
+            });     
+        // monitora o acesso a página para mostrar ou não o scroll vertical 
+        document.body.style.overflowY = "auto";   
     }, [])
 
     const getModalComponent = () => {
@@ -32,7 +33,7 @@ const LandingPage = () => {
     const [showLoading, setShowLoading] = useState(false);
 
     return (
-        <div>
+        <div className="LandingPage">
             <ModalComponent state={showModal} modalContent={checkDb ? (!showLoading ? <Forms setCloseModal={setShowModal} formContent={<UserName setShowLoading={setShowLoading}/>}/> : <TitleFooter animationHere={true}/>) : <AnimatedLoading />}/>
             <nav className="landingPageNavbar">
                 <p>Sweet Cine <span>- O lar do inesquecível</span></p>
