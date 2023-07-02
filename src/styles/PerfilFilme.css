@@ -120,8 +120,17 @@
 }
 
 .paragraphComment{
-    padding: 1rem 4rem 1rem 4rem;
-    background: #ff3f3f2d;
+    padding: 1rem 10rem 1rem 10rem;
+    background: #0f1a20cf;
+}
+.paragraphComment h3{
+    font-family: var(--Anton);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.paragraphs{
+    font-family: var(--Grandiflora);
+    font-size: 17px;
 }
 .paragraphs, .sinopseContent p::first-letter{
     margin-left: 2rem;
@@ -203,6 +212,9 @@
     .infosPerfilFilme li p{
         font-size: 16px;
         text-align: center;
+    }
+    .paragraphComment{
+        padding: 1rem 4rem 1rem 4rem;
     }
     .paragraphComment p{
         font-size: 16px;

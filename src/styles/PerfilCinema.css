@@ -50,8 +50,9 @@
     overflow: hidden;
     margin-top: 2rem;
     padding: 0 2rem 0 2rem;
-    font-family: var(--Tsukimi);
-    font-size: 16px;
+    font-family: var(--Grandiflora);
+    font-size: 17px;
+    font-style: normal;
 }
 
 .editAndDelete{

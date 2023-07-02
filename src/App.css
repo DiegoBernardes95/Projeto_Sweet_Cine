@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cutive+Mono&family=Monoton&family=Tsukimi+Rounded:wght@300&family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cutive+Mono&family=Grandiflora+One&family=Monoton&family=Tsukimi+Rounded:wght@300&family=Zeyada&display=swap');
 :root{
   --cutiveMono: 'Cutive Mono', monospace;
   --Monoton: 'Monoton', cursive;
   --Anton: "Anton", sans-serif;
   --Zeyada: 'Zeyada', cursive;
   --Tsukimi: "Tsukimi Rounded", sans-serif;
-  --Scarlet: #ff3f3f;
+  --Grandiflora: 'Grandiflora One', serif;
+  --Scarlet: #ff3f3f; 
 }
 *{
   margin: 0;
