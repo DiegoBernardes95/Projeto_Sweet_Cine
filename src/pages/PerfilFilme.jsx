@@ -58,7 +58,11 @@ const PerfilFilme = () => {
     const comentarioContent = useRef();
     const infoContent = useRef();
     useEffect(() => {
-        headerPerfilFilme.current.style.background = `url("${movieForId.capa}") #00000080`;
+        if(movieForId.capa){
+            headerPerfilFilme.current.style.background = `url("${movieForId.capa}") #00000080`;
+        } else{
+            headerPerfilFilme.current.style.background = "url(https://cdn.pixabay.com/photo/2020/11/30/18/14/smpte-color-bars-5791787_1280.png) #000000ac";
+        }
         headerPerfilFilme.current.style.backgroundRepeat = "no-repeat";
         headerPerfilFilme.current.style.backgroundSize = "cover";
         headerPerfilFilme.current.style.backgroundBlendMode = "darken";

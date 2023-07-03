@@ -120,7 +120,7 @@ const Dashboard = () => {
                                 <ul className="listRanking">
                                     {rankingFilmes.length != 0 ? rankingFilmesSlice.map(res => (
                                         <li>
-                                            <Link to={`/Filmes/${res.id}`}><img src={res.poster} alt="" /></Link>
+                                            <Link to={`/Filmes/${res.id}`}><img src={res.poster ? res.poster : "https://img.freepik.com/vetores-gratis/glitch-error-404-page_23-2148105404.jpg?w=2000"} alt="" /></Link>
                                             <div>
                                                 {Array.from({length: res.nota}, (_, index) => (
                                                     <img key={index} className="starFull" src={star} alt="" />

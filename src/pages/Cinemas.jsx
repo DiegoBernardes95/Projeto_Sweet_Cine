@@ -46,7 +46,11 @@ const Cinemas = () => {
     }
 
     useEffect(() => {
-        lastCine.current.style.background = `url("${imgLastCinema.foto_do_cinema}") #000000ac`;
+        if (imgLastCinema.foto_do_cinema) {
+            lastCine.current.style.background = `url("${imgLastCinema.foto_do_cinema}") #000000ac`;
+        } else {
+            lastCine.current.style.background = "url(https://cdn.pixabay.com/photo/2020/11/30/18/14/smpte-color-bars-5791787_1280.png) #000000ac";
+        }
         lastCine.current.style.backgroundSize = "cover";
         lastCine.current.style.backgroundRepeat = 'no-repeat';
         lastCine.current.style.backgroundBlendMode = "darken";
@@ -105,7 +109,7 @@ const Cinemas = () => {
     // FIM DA LISTAGEM DE FILMES PELO CINEMA
 
     useEffect(() => {
-        ScrollReveal({reset: true}).reveal(".asideLateral" , {
+        ScrollReveal({ reset: true }).reveal(".asideLateral", {
             origin: "left",
             distance: "100px",
             duration: 1000
@@ -158,7 +162,7 @@ const Cinemas = () => {
                                                     <img key={index} src={starFull} alt="" />
                                                 ))}
                                             </figure>
-                                            <sub>{<ListNotas index={cines.nota}/>}</sub> 
+                                            <sub>{<ListNotas index={cines.nota} />}</sub>
                                         </div>
                                         <p>{cines.nome}</p>
                                         <p>{cines.bairro} <br />{cines.cidade}</p>

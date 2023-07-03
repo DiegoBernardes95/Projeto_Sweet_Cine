@@ -35,12 +35,17 @@ const PerfilCinema = () => {
 
     // Effect para colocar a imagem dá requisição como imagem de background
     useEffect(() => {
-        setBackground.current.style.background = `url("${cinemaForId.foto_do_cinema}") #000000ac`;
+        if (cinemaForId.foto_do_cinema) {
+            setBackground.current.style.background = `url("${cinemaForId.foto_do_cinema}") #000000ac`;
+
+        } else {
+            setBackground.current.style.background = "url(https://cdn.pixabay.com/photo/2020/11/30/18/14/smpte-color-bars-5791787_1280.png) #000000ac";
+        }
+
         setBackground.current.style.backgroundRepeat = "no-repeat";
         setBackground.current.style.backgroundSize = "cover";
         setBackground.current.style.backgroundBlendMode = "darken";
         setBackground.current.style.backgroundAttachment = "fixed";
-
     }, [cinemaForId])
 
     // Requisição para mostrar os filmes por cinema
@@ -114,7 +119,7 @@ const PerfilCinema = () => {
 
     // FORMATAR TEXTO DE COMENTÁRIO
     const fornatedText = () => {
-        if(cinemaForId.comentario){
+        if (cinemaForId.comentario) {
             return cinemaForId.comentario.split('\n').map(line => (
                 <React.Fragment>
                     {line}
@@ -226,9 +231,9 @@ const PerfilCinema = () => {
                                 </li>
                             }
                         </ul>
-                        <TitleLoading animationHere={false}/>
+                        <TitleLoading animationHere={false} />
                     </section>
-                    
+
                     <Footer />
                 </main>
             </div>

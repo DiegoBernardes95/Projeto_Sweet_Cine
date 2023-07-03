@@ -80,7 +80,11 @@ const Filmes = () => {
     // CÓDIGO PARA SETAR O BACKGROUND DO COMPONENTE QUE EXIBI O ÚLTIMO FILME ASSISTIDO E SCROLLAR ATÉ UM ELEMENTO
     const setBackground = useRef();
     useEffect(() => {
-        setBackground.current.style.background = `url("${lastMovie.capa}") #00000080`;
+        if(lastMovie.capa){
+            setBackground.current.style.background = `url("${lastMovie.capa}") #00000080`;
+        } else{
+            setBackground.current.style.background = "url(https://cdn.pixabay.com/photo/2020/11/30/18/14/smpte-color-bars-5791787_1280.png) #000000ac";
+        }
         setBackground.current.style.backgroundRepeat = "no-repeat";
         setBackground.current.style.backgroundSize = "cover";
         setBackground.current.style.backgroundBlendMode = "darken";
