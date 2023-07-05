@@ -177,6 +177,7 @@ body{
   width: 21rem;
   transition: all .4s ease-in-out;
   background: #d9d9d91b;
+  backdrop-filter: blur(6px);
 }
 
 

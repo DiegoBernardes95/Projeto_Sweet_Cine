@@ -151,7 +151,7 @@ const FormCinema = ({setShowLoading, whatForm, id, nome, bairro, cidade, estado,
                             </label>
                             <select name="" onChange={e => setCineNota(e.target.value)} className="formSelect">
                                 <option value="Notas" selected disabled>Notas</option>
-                                <option value="1">1 - Ruim</option>
+                                <option value="1">1 - Péssimo</option>
                                 <option value="2">2 - Razoável</option>
                                 <option value="3">3 - Bom</option>
                                 <option value="4">4 - Muito bom</option>
@@ -246,7 +246,7 @@ const FormCinema = ({setShowLoading, whatForm, id, nome, bairro, cidade, estado,
                             </label>
                             <select name="" onChange={e => setCineNota(e.target.value)} className="formSelect">
                                 <option value={cineNota} selected disabled>{nota} - {<ListNotas index={cineNota}/>}</option>
-                                <option value="1">1 - Ruim</option>
+                                <option value="1">1 - Péssimo</option>
                                 <option value="2">2 - Razoável</option>
                                 <option value="3">3 - Bom</option>
                                 <option value="4">4 - Muito bom</option>
