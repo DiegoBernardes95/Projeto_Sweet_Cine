@@ -162,6 +162,7 @@ const PerfilFilme = () => {
                             <li><button onClick={scrollToSinopse}>Sinopse</button></li>
                             <li><button onClick={scrollToComment}>Comentário</button></li>
                             <li><button onClick={scrollToInfo}>Informações</button></li>
+                            <li><Link to="/Lista_Completa">Lista de filmes</Link></li>
                             <li><button onClick={editMovie}>Editar informações</button></li>
                             <li><button onClick={deleteMovie}>Excluir registro</button></li>
                         </ul>

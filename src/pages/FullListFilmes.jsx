@@ -131,7 +131,7 @@ const FullListFilmes = () => {
                         <div className='textHeaderListFull'>
                             <h1>{movieListFull.length != 0 && moviesListFullGenre.length != 0 ? (genero ? `Filmes de ${genero}` : `${msgShowFilmes[0]}`) : (genero ? "Gênero não encontrado" : (movieListFull.length == 0 ? "Lista indisponível" : `${msgShowFilmes[0]}`))}</h1>
 
-                            {movieListFull.length != 0 && moviesListFullGenre.length != 0 ? (genero ? <p>{`Essa é a lista completa de filmes de ${genero.toLowerCase()} que você assistiu nas telonas!`}<br />{msgShowFilmes[2]}</p> : <p>{`${msgShowFilmes[1]}`}<br />{msgShowFilmes[2]}</p>) : (genero ? <p>Lista de filmes por gênero não encontrada</p> : (movieListFull.length == 0 ? <p>A sua lista de filmes não está disponível no momento.</p> : <p>{`${msgShowFilmes[1]}`} <br />{msgShowFilmes[2]}!</p>))}
+                            {movieListFull.length != 0 && moviesListFullGenre.length != 0 ? (genero ? <p>{`Essa é a lista completa de filmes de ${genero.toLowerCase()} que você assistiu nas telonas!`}<br />Total de filmes: <span>{moviesListFullGenre.length}</span><br />{msgShowFilmes[2]}</p> : <p>{`${msgShowFilmes[1]}`}<br />{msgShowFilmes[2]}</p>) : (genero ? <p>Lista de filmes por gênero não encontrada</p> : (movieListFull.length == 0 ? <p>A sua lista de filmes não está disponível no momento.</p> : <p>{`${msgShowFilmes[1]}`}<br />Total de filmes: <span>{movieListFull.length}</span><br />{msgShowFilmes[2]}!</p>))}
                         </div>
                     </div>
                     <div ref={selectList} className='selectList selectListFull'>

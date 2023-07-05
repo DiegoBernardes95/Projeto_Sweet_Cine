@@ -25,6 +25,10 @@
     font-size: 17px;
     font-family: var(--Tsukimi);
 }
+.textHeaderListFull span{
+    font-family: var(--Anton);
+    color: #ff3f3f;
+}
 /* FIM DO HEADER DA PÁGINA DE LISTAGEM DE FILMES */
 
 /* PARTE PRINCIPAL DA PÁGINA DE LISTAGEM DE FILMES */

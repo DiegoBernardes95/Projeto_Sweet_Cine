@@ -76,6 +76,13 @@ body{
   padding: 2rem;
   position: relative;
 }
+.asideLateral::-webkit-scrollbar{
+  width: 1px;
+}
+.asideLateral::-webkit-scrollbar-thumb{
+  background-color: #ff3f3f5e;
+}
+
 .contentLateral{
   flex-direction: column;
   gap: 2.5rem;
